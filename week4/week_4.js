@@ -22,28 +22,52 @@ console.log(subtractAge(ages))
 // Using the array.reduce method to sum all the numbers in the array. "x" represents the accumulated sum and "y" represents the current element's value.
 // Dividing that sum by the number of elements in the array
 
-let averageArrayAge = array => array.reduce((x,y) => x + y, 0) / array.length
+let averageArrayAge = array => array.reduce((x, y) => x + y, 0) / array.length
 console.log(averageArrayAge(ages))
 
-// SOLUTION FOR #2
+// SOLUTION FOR #2a
 
-// Creating names array
-let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob']
+    // Creating names array, nameLengths array to hold lengths of each name
 
+    let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'] 
+    let lengthOfNames = []
+
+    // Iterate through names, count number of letters in each name, push to nameLengths array
+
+    for(let name of names) {
+        lengthOfNames.push(name.length)
+    }
+
+    // array.reduce method sums numbers in the nameLengths array, sum is divided by the number of array elements, average length of each names is returned
+
+    let averageLengthOfNames = array => array.reduce((x, y) => x + y, 0) / array.length
+
+    console.log(averageLengthOfNames(lengthOfNames))
+
+// SOLUTION FOR #2b
+    console.log(names.join(' '))
 
 // SOLUTION FOR #3
-// array[array.length - 1]
+    // array[array.length - 1]
 
 // SOLUTION FOR #4
-// array[0]
+    // array[0]
 
 // SOLUTION FOR #5
 
-// Creating nameLengths array
-let nameLengths = []
+    // Creating nameLengths array
+    let nameLengths = []
 
-// Creating function to determine the length of each name
-function lengthOfNAme = 
+    // Iterating through names, counting number of letters in each name, pushing to nameLengths array
+    
+    for(let name of names) {
+        nameLengths.push(name.length)
+    }
 
-// Calling function on each element in the names array and pushing the resulting value to the new nameLengths array
-names.forEach(lengthOfName)
+    console.log(nameLengths)
+
+// SOLUTION FOR #6
+    // array.reduce method sums numbers in the nameLengths array. "x" represents the accumulated sum and "y" represents the current element's value.
+
+        let sumOfNameLengths = nameLengths.reduce((x, y) => x + y, 0)
+        console.log(sumOfNameLengths)
