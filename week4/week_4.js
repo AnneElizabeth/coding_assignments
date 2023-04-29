@@ -73,6 +73,7 @@ console.log(averageArrayAge(ages))
         console.log(sumOfNameLengths)
 
 // SOLUTION FOR #7
+    // arrow function using the built-in string.repeat() JS method
     let multiplyWord = (word, n) => word.repeat(n)
         
     console.log(multiplyWord('Cool', 7))
@@ -85,6 +86,9 @@ console.log(averageArrayAge(ages))
 // SOLUTION FOR #9
     let numArray = [35, 8, 87, 2, 10, 1]
          
+    // array.reduce method sums numbers in the numArray array
+    // if else statement checks if condition is true or false
+    
     function trueDat (array) {
         let sumOfArray = array.reduce((x, y) => x+ y, 0)
         
@@ -98,4 +102,63 @@ console.log(averageArrayAge(ages))
     trueDat(numArray)
 
 // SOLUTION FOR #10
-    
+    // array.reduce method sums numbers in the numArray array
+    // sum is divided by the number of array elements, returns average value of elements
+    // reusing array from #9
+
+    let numAverage = array => array.reduce((x, y) => x + y, 0) / array.length
+        
+    console.log(numAverage(numArray))
+
+// SOLUTION FOR #11
+    // Reusing numAverage function written in #11, then comparing values with an if else statement
+
+    let numArray1 = [9, 45, 0, 11, 8]
+    let numArray2 = [4, 6, 17, 20, 7]
+
+    let numAverage1 = numAverage(numArray1)
+    let numAverage2 = numAverage(numArray2)
+
+    function compareAverages (array1, array2) {
+        let numAverage1 = numAverage(array1)
+        let numAverage2 = numAverage(array2)
+        
+        if (numAverage1 > numAverage2) {
+            console.log(true)
+        } else {
+            console.log(false)
+        }
+    }
+   compareAverages(numArray1, numArray2)
+
+// SOLUTION FOR #12
+
+    // Series of conditional statements
+    function willBuyDrink (isHotOutside, moneyInPocket) {
+        if (isHotOutside >= 80 && moneyInPocket > 10.50) {
+            true
+            console.log('Drinks on me!')
+        } else if (isHotOutside >= 80 && moneyInPocket < 10.50) {
+                console.log('Will you buy me a drink?')
+        } else if (isHotOutside < 80 && moneyInPocket > 10.50){
+                console.log('Hot chocolate on me!')
+        } else {
+            console.log('It is cold and I am not thirsty anyway!')
+        }
+    }
+
+    willBuyDrink(65,6)
+
+// SOLUTION FOR #13
+    // This is a function that determines whether I can take a break from work and play fetch with my dogs. I work at home and often lose track of time.
+
+    function playFetch (hoursSitting, foundBall) {
+        if (hoursSitting >= 2 && foundBall >= 1) {
+            console.log('Time for fetch!')
+        } else if (hoursSitting <= 2 || foundBall <= 1) {
+            console.log('No fetch yet!')
+        } 
+    }
+
+    playFetch(2, 1)
+
