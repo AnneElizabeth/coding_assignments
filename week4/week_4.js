@@ -71,3 +71,31 @@ console.log(averageArrayAge(ages))
 
         let sumOfNameLengths = nameLengths.reduce((x, y) => x + y, 0)
         console.log(sumOfNameLengths)
+
+// SOLUTION FOR #7
+    let multiplyWord = (word, n) => word.repeat(n)
+        
+    console.log(multiplyWord('Cool', 7))
+
+// SOLUTION FOR #8
+    let fullName = (firstName, lastName) => firstName + ' ' + lastName
+
+    console.log(fullName('Suki', 'Waterhouse'))
+
+// SOLUTION FOR #9
+    let numArray = [35, 8, 87, 2, 10, 1]
+         
+    function trueDat (array) {
+        let sumOfArray = array.reduce((x, y) => x+ y, 0)
+        
+        if (sumOfArray >= 100) {
+        console.log('True dat')
+        } else {
+            console.log('False dat')
+        }
+    }
+
+    trueDat(numArray)
+
+// SOLUTION FOR #10
+    
